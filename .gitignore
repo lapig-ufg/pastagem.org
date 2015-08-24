@@ -1,1 +1,3 @@
 src/tmp
+db/
+src/configuration.php
