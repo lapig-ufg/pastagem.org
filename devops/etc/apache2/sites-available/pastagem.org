@@ -1,0 +1,30 @@
+<VirtualHost *:80>
+	ServerAdmin webmaster@localhost
+	ServerName pastagem.org
+	#ServerName 200.137.217.159 
+
+	DocumentRoot /data/paginas/pastagem
+
+	<Directory />
+		Options Indexes FollowSymLinks MultiViews
+		AllowOverride None
+		Order allow,deny
+		allow from all
+	</Directory>
+
+	<Directory /data/paginas/pastagem>
+                Options Indexes FollowSymLinks MultiViews
+                AllowOverride None
+                Order allow,deny
+                allow from all
+        </Directory>
+
+	ErrorLog ${APACHE_LOG_DIR}/pastagem.org.error.log
+
+	# Possible values include: debug, info, notice, warn, error, crit,
+	# alert, emerg.
+	LogLevel info
+
+	CustomLog ${APACHE_LOG_DIR}/pastagem.org.access.log combined
+
+</VirtualHost>

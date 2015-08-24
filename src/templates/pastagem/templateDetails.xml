@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="2.5" type="template" client="site" method="upgrade">
+	<name>Pastagem Theme</name>
+	<creationDate>19/10/2014</creationDate>
+	<author>Leandro Leal Parente</author>
+	<authorEmail>leal.parente@gmail.com</authorEmail>
+	<authorUrl>http://www.lapig.iesa.ufg.br</authorUrl>
+	<copyright></copyright>
+	<license>GNU/GPL</license>
+	<version>2.0.1</version>
+	<description>Pastagem.org</description>
+	<files>
+		<filename>css/bootstrap-theme.min.css</filename>
+		<filename>css/bootstrap-theme.css</filename>
+		<filename>css/bootstrap-theme.css.map</filename>
+		<filename>css/bootstrap.css.map</filename>
+		<filename>css/bootstrap.min.css</filename>
+		<filename>css/bootstrap.css</filename>
+		<filename>css/pastagem.css</filename>
+		<filename>fonts/glyphicons-halflings-regular.woff</filename>
+		<filename>fonts/glyphicons-halflings-regular.ttf</filename>
+		<filename>fonts/glyphicons-halflings-regular.svg</filename>
+		<filename>fonts/glyphicons-halflings-regular.eot</filename>
+		<filename>img/logo-lapig.png</filename>
+		<filename>img/fundo.jpg</filename>
+		<filename>img/mapa-interativo.jpg</filename>
+		<filename>img/pastagem.jpg</filename>
+		<filename>img/logo-lapig-sae.png</filename>
+		<filename>img/logo-ufg.png</filename>
+		<filename>img/logo-sae.png</filename>
+		<filename>img/equipe.jpg</filename>
+		<filename>img/base-documental.jpg</filename>
+		<filename>main.html</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>aew.txt</filename>
+		<filename>js/bootstrap.js</filename>
+		<filename>js/bootstrap.min.js</filename>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>php/ja_templatetools.php</filename>
+		<filename>php/ja_vars.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<positions>
+		<position>menu</position>
+		<position>syndicate</position>
+		<position>right</position>
+		<position>center</position>
+	</positions>
+	<params>
+	</params>
+</extension>

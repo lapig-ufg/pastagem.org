@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+    <name>com_tlpteam</name>
+    <creationDate>2015-01-17</creationDate>
+    <copyright>Copyright (C) 2013. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <author>TechLabPro</author>
+    <authorEmail>techlabpro@gmail.com</authorEmail>
+    <authorUrl>http://www.techlabpro.com</authorUrl>
+    <version>1.0.1</version>
+    <description>Responsive Joomla 3.x component to manage team profile</description>
+        
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    <files folder="site">
+        <filename>index.html</filename>
+        <filename>tlpteam.php</filename>
+        <filename>controller.php</filename>
+        <filename>router.php</filename>
+        <folder>views</folder>
+        <folder>models</folder>
+        <folder>controllers</folder>
+        <folder>helpers</folder>
+        <folder>assets</folder>
+    </files>
+    <languages folder="languages/site">
+        
+			<language tag="en-GB">en-GB/en-GB.com_tlpteam.ini</language>
+    </languages>
+    <administration>
+        <menu img="components/com_tlpteam/assets/images/s_com_tlpteam.png" >COM_TLPTEAM</menu>
+        <submenu>
+            
+			<menu link="option=com_tlpteam&amp;view=teams" view="teams" img="components/com_tlpteam/assets/images/s_teams.png" alt="Tlpteam/Teams">COM_TLPTEAM_TITLE_TEAMS</menu>
+			<menu link="option=com_tlpteam&amp;view=settings" view="teams" img="components/com_tlpteam/assets/images/s_teams.png" alt="Tlpteam/Settings">COM_TLPTEAM_TITLE_SETTINGS</menu>
+
+        </submenu>
+        <files folder="administrator">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>tlpteam.php</filename>
+            <folder>controllers</folder>
+            <folder>assets</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+        <languages folder="languages/administrator">
+            
+			<language tag="en-GB">en-GB/en-GB.com_tlpteam.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_tlpteam.sys.ini</language>
+        </languages>
+    </administration>
+    <plugins>
+        <plugin group="search" plugin="tlpteam"/>
+    </plugins>
+    
+</extension>
+<!-- Component built by the Joomla Component Creator -->
+<!-- http://www.component-creator.com/ -->

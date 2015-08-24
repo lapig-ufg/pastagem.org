@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field name="id" type="text" default="0" label="COM_TLPTEAM_FORM_LBL_TEAM_ID"
+            readonly="true" class="readonly"
+            description="JGLOBAL_FIELD_ID_DESC" /> 
+
+       <field name="imagepath" type="text" size="40" class="inputbox"
+            label="COM_TLPTEAM_FORM_LBL_IMAGE_PATH"
+            description="COM_TLPTEAM_FORM_DESC_IMAGE_PATH" 
+            required="true" 
+            filter="safehtml" /> 
+
+       <field name="smallwidth" type="text" size="40" class="inputbox"
+            label="COM_TLPTEAM_FORM_LBL_SETTING_SMALL_WIDTH"
+            description="COM_TLPTEAM_FORM_DESC_SMALL_WIDTH" 
+			filter="safehtml" /> 
+			
+		<field name="smallheight" type="text" size="40" class="inputbox"
+            label="COM_TLPTEAM_FORM_LBL_SETTING_SMALL_HEIGHT"
+            description="COM_TLPTEAM_FORM_DESC_SMALL_HEIGHT" 
+			filter="safehtml" /> 
+
+       <field name="mediumwidth" type="text" size="40" class="inputbox"
+            label="COM_TLPTEAM_FORM_LBL_SETTING_MEDIUM_WIDTH"
+            description="COM_TLPTEAM_FORM_DESC_MEDIUM_WIDTH" 
+            filter="safehtml" /> 
+			
+		<field name="mediumheight" type="text" size="40" class="inputbox"
+            label="COM_TLPTEAM_FORM_LBL_SETTING_MEDIUM_HEIGHT"
+            description="COM_TLPTEAM_FORM_DESC_MEDIUM_HEIGHT" 
+            filter="safehtml" />
+
+		<field name="largewidth" type="text" size="40" class="inputbox"
+            label="COM_TLPTEAM_FORM_LBL_SETTING_LARGE_WIDTH"
+            description="COM_TLPTEAM_FORM_DESC_SETTING_LARGE_WIDTH" 
+          	filter="safehtml" /> 
+			
+		<field name="largeheight" type="text" size="40" class="inputbox"
+            label="COM_TLPTEAM_FORM_LBL_SETTING_LARGE_HEIGHT"
+            description="COM_TLPTEAM_FORM_DESC_SETTING_LARGE_HEIGHT" 
+          	filter="safehtml" /> 
+					
+		<field name="display_no" type="list" default="4" label="COM_TLPTEAM_FORM_LBL_SETTING_DISPLAY_NUMBER" description="COM_TLPTEAM_FORM_DESC_SETTING_DISPLAY_NUMBER">
+		  <option value="2">2 Per Row</option>
+		  <option value="3">3 Per Row</option>
+		  <option value="4">4 Per Row</option>
+		</field>
+			
+		<field name="enable_bootstrap_css" type="radio" default="0" class="btn-group btn-group-yesno" 
+			label="COM_TLPTEAM_FORM_LBL_SETTING_ENABLE_BOOTSTRAP_CSS" 
+			description="COM_TLPTEAM_FORM_DESC_SETTING_BOOTSTRAP_CSS">
+			  <option value="1">True</option>
+			  <option value="0">False</option>
+		</field>
+						
+				
+		<field name="detailpage_image_grid" type="list" default="4" label="COM_TLPTEAM_FORM_LBL_SETTING_IMAGEGRID" description="COM_TLPTEAM_FORM_DESC_SETTING_IMAGEGRID">
+		  <option value="2">COM_TLPTEAM_FORM_LBL_SETTING_GRID2</option>
+		  <option value="3">COM_TLPTEAM_FORM_LBL_SETTING_GRID3</option>
+		  <option value="4">COM_TLPTEAM_FORM_LBL_SETTING_GRID4</option>
+		  <option value="5">COM_TLPTEAM_FORM_LBL_SETTING_GRID5</option>
+		  <option value="6">COM_TLPTEAM_FORM_LBL_SETTING_GRID6</option>
+		</field>
+		
+            
+
+	</fieldset>
+
+</form>

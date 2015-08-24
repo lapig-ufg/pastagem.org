@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="lapig" method="upgrade">
+	<name>Lapig - PostgreSQL</name>
+	<author>Leandro Leal</author>
+	<creationDate>Setembro 2009</creationDate>
+	<copyright>Copyright (C) 2009 Holder. All rights reserved.</copyright>
+	<license>GNU General Public License</license>
+	<authorEmail>leal.parente@gmail.com</authorEmail>
+	<authorUrl>url</authorUrl>
+	<version>1.0</version>
+	<description>Conexão com o PostgreSQL</description>
+	<files>
+		<filename plugin="postgresql">postgresql.php</filename>
+	</files>
+	<params>
+  		<param port="5432"
+  		host="localhost"
+  		dbname="lapig"
+  		username="postgres"
+  		password="postgres"/>
+ 		<param name="port" type="text" default="5432" label="Port" description="PostgreSQL Port"/>
+ 		<param name="host" type="text" default="localhost" label="Host" description="PostgreSQL Host"/>
+ 		<param name="dbname" type="text" default="" label="Database" description="PostgreSQL Database"/>
+ 		<param name="username" type="text" default="" label="Username" description="PostgreSQL Username"/>
+ 		<param name="password" type="text" default="" label="Password" description="PostgreSQL Username Password"/>
+	</params>
+</install>

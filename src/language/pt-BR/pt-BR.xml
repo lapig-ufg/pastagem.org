@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metafile version="3.4" client="site">
+	<name>Português Brasileiro (pt-BR)</name>
+	<version>3.4.3.1</version>
+	<creationDate>02-JUL-15</creationDate>
+	<author>Equipe de Tradução pt-BR</author>
+	<authorEmail>pt-br@joomlacarioca.com.br</authorEmail>
+	<authorUrl>https://brasil.joomla.com</authorUrl>
+	<copyright>Copyright (C) 2005 - 2015 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<description>Brazilian Portuguese Site language for Joomla 3.4.3</description>
+	<metadata>
+		<name>Brazilian Portuguese</name>
+		<tag>pt-BR</tag>
+		<rtl>0</rtl>
+		<locale>pt_BR.utf8, pt_BR.UTF-8, pt_BR, brazil</locale>
+		<firstDay>0</firstDay>
+		<weekEnd>0,6</weekEnd>
+	</metadata>
+	<params />
+</metafile>

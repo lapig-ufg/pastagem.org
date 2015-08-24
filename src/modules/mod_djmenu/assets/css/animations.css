@@ -1,0 +1,29 @@
+@CHARSET "UTF-8";
+
+.dj-main ul {
+	-webkit-animation-duration: 400ms;
+	animation-duration: 400ms;
+	-webkit-animation-delay: 50ms;
+	animation-delay: 50ms;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+.dj-main.fast ul {
+	-webkit-animation-duration: 200ms;
+	animation-duration: 200ms;
+}
+.dj-main.slow ul {
+	-webkit-animation-duration: 600ms;
+	animation-duration: 600ms;
+}
+
+
+/* hide submenu */
+.dj-main ul, .dj-main li:hover ul ul, .dj-main li:hover li:hover ul ul, .dj-main li:hover li:hover li:hover ul ul, .dj-main li:hover li:hover li:hover li:hover ul ul,
+.dj-main ul, .dj-main li.hover ul ul, .dj-main li.hover li.hover ul ul, .dj-main li.hover li.hover li.hover ul ul, .dj-main li.hover li.hover li.hover li.hover ul ul {
+	display: none;
+}
+/* show submenu */
+.dj-main li.hover ul, .dj-main li.hover li.hover ul, .dj-main li.hover li.hover li.hover ul, .dj-main li.hover li.hover li.hover li.hover ul, .dj-main li.hover li.hover li.hover li.hover li.hover ul {
+	display: block
+}

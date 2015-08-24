@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+	<name>DJ-Menu</name>
+	<creationDate>April 2014</creationDate>
+    <author>DJ-Extensions.com</author>
+	<copyright>Copyright (C) 2012-2014 DJ-Extensions.com, All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses GNU/GPL</license>
+	<authorEmail>contact@dj-extensions.com</authorEmail>
+	<authorUrl>http://dj-extensions.com</authorUrl>
+	<version>2.0.1</version>
+	<description>MOD_DJMENU_MODULE_DESC</description>
+	<files>
+		<filename module="mod_djmenu">mod_djmenu.php</filename>
+		<filename>mod_djmenu.xml</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl</folder>
+		<folder>assets</folder>
+		<folder>language</folder>
+		<folder>themes</folder>
+	</files>
+	<updateservers>
+		<server type="extension" priority="1" name="DJ-Menu Module">http://dj-extensions.com/updates/djmenu.xml</server>
+	</updateservers>
+	<config>
+		<fields name="params">
+		
+			<fieldset name="basic">
+				<field name="menu" type="menu" default="mainmenu" label="MOD_DJMENU_MENU_NAME" description="MOD_DJMENU_MENU_NAME_DESC" />
+				<field name="endLevel" type="list" default="0" label="MOD_DJMENU_END_LEVEL" description="MOD_DJMENU_END_LEVEL_DESC">
+					<option value="0">JALL</option>
+					<option value="1">J1</option>
+					<option value="2">J2</option>
+					<option value="3">J3</option>
+					<option value="4">J4</option>
+					<option value="5">J5</option>
+					<option value="6">J6</option>
+					<option value="7">J7</option>
+					<option value="8">J8</option>
+					<option value="9">J9</option>
+					<option value="10">J10</option>					
+				</field>
+				<field name="css" type="folderlist" default="default" label="MOD_DJMENU_THEME" description="MOD_DJMENU_THEME_DESC" directory="modules/mod_djmenu/themes" hide_none="true" hide_default="true">
+					<option value="0">MOD_DJMENU_THEME_OVERRIDE</option>
+				</field>
+				<field name="select" type="radio" class="btn-group" default="0" label="MOD_DJMENU_DISPLAY_SELECT" description="MOD_DJMENU_DISPLAY_SELECT_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="width" type="text" size="5" default="800" label="MOD_DJMENU_SCREEN_WIDTH" description="MOD_DJMENU_SCREEN_WIDTH_DESC" />
+				
+			</fieldset>
+			<fieldset name="advanced" label="MOD_DJMENU_ANIMATION_OPTIONS">
+				
+				<field name="moo" type="radio" class="btn-group" default="1" label="MOD_DJMENU_MOO" description="MOD_DJMENU_MOO_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			
+				<field type="spacer" label="MOD_DJMENU_ANIMATION_OPTIONS_DESC" />
+				
+				<field name="animation_in" type="groupedlist" label="MOD_DJMENU_ENTRANCE_ANIMATION" default="fadeIn">
+								
+					<group label="Fading Entrances">
+					  <option value="fadeIn">fadeIn</option>
+					  <option value="fadeInDown">fadeInDown</option>
+					  <option value="fadeInLeft">fadeInLeft</option>
+					  <option value="fadeInRight">fadeInRight</option>
+					  <option value="fadeInUp">fadeInUp</option>
+					</group>
+					
+					<group label="Sliders">
+					  <option value="slideInLeft">slideInLeft</option>
+					  <option value="slideInRight">slideInRight</option>
+					  <option value="slideInDown">slideInDown</option>
+					  <option value="slideInUp">slideInUp</option>
+					</group>
+										
+				</field>
+				  
+				<field name="animation_out" type="groupedlist" label="MOD_DJMENU_EXIT_ANIMATION" default="zoomOut">
+								
+					<group label="Fading Exits">
+					  <option value="fadeOut">fadeOut</option>
+					  <option value="fadeOutDown">fadeOutDown</option>
+					  <option value="fadeOutLeft">fadeOutLeft</option>
+					  <option value="fadeOutRight">fadeOutRight</option>
+					  <option value="fadeOutUp">fadeOutUp</option>
+					</group>
+					
+					<group label="Sliders">
+					  <option value="slideOutLeft">slideOutLeft</option>
+					  <option value="slideOutRight">slideOutRight</option>
+					  <option value="slideOutUp">slideOutUp</option>
+					  <option value="slideOutDown">slideOutDown</option>
+					</group>
+					
+				</field>
+				
+				<field name="animation_speed" type="list" label="MOD_DJMENU_ANIMATION_SPEED" default="normal">
+					<option value="fast">Fast</option>
+					<option value="normal">Normal</option>
+					<option value="slow">Slow</option>
+				</field>
+				
+				<field type="spacer" label="&lt;hr &#47;&gt;" />
+				
+				<field name="wrapper" type="text" default="" label="MOD_DJMENU_WRAPPER" description="MOD_DJMENU_WRAPPER_DESC" />
+				<field name="delay" type="text" default="" size="10" label="MOD_DJMENU_DELAY" description="MOD_DJMENU_DELAY_DESC" />
+				
+			</fieldset>
+			
+			<fieldset name="OTHER">
+				
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+					<option
+						value="itemid"></option>
+				</field>
+				
+			</fieldset>
+		</fields>
+	</config>
+	
+	<media destination="djextensions" folder="media">
+		<folder>css</folder>
+	</media>
+</extension>

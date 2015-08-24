@@ -1,0 +1,21 @@
+#socialmediaright { position:fixed; right:0; top:150px; }
+#socialmedialeft { position:fixed; left:0; top:150px; }
+#socialmedialeft a, #socialmediaright a { margin-bottom:1px; }
+
+#google { background:url(images/social-sprite.png) -229px -5px #282828; height:65px; width:65px; transition:all 0.35s linear; }
+#google:hover { background:url(images/social-sprite.png) -229px -80px; height:65px; width:65px;  }
+#twitter { background:url(images/social-sprite.png) -607px -4px #282828; height:65px; width:65px;  transition:all 0.35s linear; }
+#twitter:hover { background:url(images/social-sprite.png) -607px -80px; height:65px; width:65px; }
+#facebook { background:url(images/social-sprite.png) -4px -4px #282828; height:65px; width:65px;  transition:all 0.35s linear; }
+#facebook:hover { background:url(images/social-sprite.png) -4px -83px; height:65px; width:65px;  }
+#pinterest { background:url(images/social-sprite.png) -383px -6px #282828; height:65px; width:65px;  transition:all 0.35s linear; }
+#pinterest:hover { background:url(images/social-sprite.png) -383px -83px; height:65px; width:65px;  }
+#linkedin { background:url(images/social-sprite.png) -307px -6px #282828; height:65px; width:65px;  transition:all 0.35s linear; }
+#linkedin:hover { background:url(images/social-sprite.png) -307px -83px; height:65px; width:65px;  }
+
+a.off { display:none; }
+
+.ssupport a {
+position: absolute;
+text-indent: -8145px;
+}

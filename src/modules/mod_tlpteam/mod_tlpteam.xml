@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6.0" client="site" method="install">
+ <name>TLP Team</name> 
+ <author>Mamunur Rashid</author> 
+ <creationDate>2015</creationDate> 
+ <copyright>All rights reserved by www.techlabpro.com</copyright> 
+ <license>GPL 2.0</license> 
+ <authorEmail>info@techlabpro.com</authorEmail> 
+ <authorUrl>www.techlabpro.com</authorUrl> 
+ <version>1.0.1</version> 
+ <description>Joomla Team display module for component TLP Team</description>
+    <!-- Listing of all files that should be installed for the module to function -->
+ <files>
+        <!-- The "module" attribute signifies that this is the main controller file -->
+  <filename module="mod_tlpteam">mod_tlpteam.php</filename>
+  <filename>index.html</filename>
+  <filename>helper.php</filename>
+  <filename>tmpl/default.php</filename>
+  <filename>tmpl/index.html</filename>
+ </files>
+    <languages>
+        <!-- Any language files included with the module -->
+        <language tag="en-GB">en-GB.mod_tlpteam.ini</language>
+    </languages>
+    <!-- Optional parameters -->
+ <config>
+            <fields name="params">
+                <fieldset name="basic">
+                    <field 
+                        name="moduleclass_sfx" 
+                        type="text" 
+                        default="" 
+                        label="LABEL_CLASS_SUFFIX" 
+                        description="DESC_MOD_SUFFIX">
+                    </field>
+                     <field 
+                        name="@spacer" 
+                        type="spacer" 
+                        default="" 
+                        label="" 
+                        description="">
+                    </field>
+                     <field 
+                        name="membercount" 
+                        type="text" 
+                        default="5" 
+                        label="LABEL_TOTAL_MEMBER_COUNT" 
+                        description="DESC_TOTAL_MEMBER_COUNT">
+                    </field>
+					<field 
+                        name="showno" 
+                        type="text" 
+                        default="5" 
+                        label="LABEL_VISIBLE_COUNT" 
+                        description="DESC_VISIBLE_COUNT">
+                    </field>
+					<field 
+                        name="speed" 
+                        type="text" 
+                        default="200" 
+                        label="LABEL_SLIDER_SPEED" 
+                        description="DESC_SLIDER_SPEED">
+                    </field>
+					<field name="shortbio" type="radio" default="true" class="btn-group btn-group-yesno" label="LABEL_SHOW_SHORT_DESCRIPTION" description="">
+					  <option value="true">True</option>
+					  <option value="false">False</option>
+					</field>
+					<field 
+                        name="shortbiolimit" 
+                        type="text" 
+                        default="100" 
+                        label="LABEL_SHORTBIO_LIMIT" 
+                        description="DESC_SHORTBIO_LIMIT">
+                    </field>
+					
+					<field name="autoplay" type="radio" default="true" class="btn-group btn-group-yesno" label="LABEL_AUTO_PLAY" description="">
+					  <option value="true">True</option>
+					  <option value="false">False</option>
+					</field>
+					
+					<field name="navigation" type="radio" default="true" class="btn-group btn-group-yesno" label="LABEL_NAVIGATION" description="">
+					  <option value="true">True</option>
+					  <option value="false">False</option>
+					</field>
+					
+					<field name="pagination" type="radio" default="false" class="btn-group btn-group-yesno" label="LABEL_PAGINATION" description="">
+					  <option value="true">True</option>
+					  <option value="false">False</option>
+					</field>
+					
+					<field name="responsive" type="radio" default="true" class="btn-group btn-group-yesno" label="LABEL_RESPONSIVE" description="">
+					  <option value="true">True</option>
+					  <option value="false">False</option>
+					</field>
+					<field name="lazyload" type="radio" default="true" class="btn-group btn-group-yesno" label="LABEL_LAZYLOAD" description="">
+					  <option value="true">True</option>
+					  <option value="false">False</option>
+					</field>
+					<field name="enablejquery" type="radio" default="true" class="btn-group btn-group-yesno" label="LABEL_ENABLE_JQUERY" description="">
+					  <option value="true">True</option>
+					  <option value="false">False</option>
+					</field>
+                    
+                </fieldset>
+            </fields>
+    </config>
+</extension>

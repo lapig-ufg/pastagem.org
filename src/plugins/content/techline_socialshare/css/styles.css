@@ -1,0 +1,234 @@
+/*!
+ *  Font Awesome 4.2.0
+ *  the iconic font designed for Bootstrap
+ * -------------------------- */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../font/fontawesome-webfont.eot?v=4.2.0');
+  src: url('../font/fontawesome-webfont.eot?#iefix&v=4.2.0') format('embedded-opentype'), url('../font/fontawesome-webfont.woff?v=4.2.0') format('woff'), url('../font/fontawesome-webfont.ttf?v=4.2.0') format('truetype'), url('../font/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.compartilhar{
+  line-height: 2;
+  font-size: 12px;
+  color: #5b6421;
+  width: 10% !important;
+}
+
+/* FONT AWESOME CORE
+ * -------------------------- */
+[class^="techline-icon-"],
+[class*=" techline-icon-"] {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  *margin-right: .3em;
+}
+[class^="techline-icon-"]:before,
+[class*=" techline-icon-"]:before {
+  text-decoration: inherit;
+  display: inline-block;
+  speak: none;
+}
+/* makes the font 33% larger relative to the icon container */
+.techline-icon-large:before {
+  vertical-align: -10%;
+  font-size: 1.3333333333333333em;
+}
+/* makes sure icons active on rollover in links */
+a [class^="techline-icon-"],
+a [class*=" techline-icon-"] {
+  display: inline;
+}
+/* increased font size for techline-icon-large */
+[class^="techline-icon-"].techline-icon-fixed-width,
+[class*=" techline-icon-"].techline-icon-fixed-width {
+  display: inline-block;
+  width: 1.1428571428571428em;
+  text-align: right;
+  padding-right: 0.2857142857142857em;
+}
+[class^="techline-icon-"].techline-icon-fixed-width.techline-icon-large,
+[class*=" techline-icon-"].techline-icon-fixed-width.techline-icon-large {
+  width: 1.4285714285714286em;
+}
+.icons-ul {
+  margin-left: 2.142857142857143em;
+  list-style-type: none;
+}
+.icons-ul > li {
+  position: relative;
+}
+.icons-ul .techline-icon-li {
+  position: absolute;
+  left: -2.142857142857143em;
+  width: 2.142857142857143em;
+  text-align: center;
+  line-height: inherit;
+}
+[class^="techline-icon-"].hide,
+[class*=" techline-icon-"].hide {
+  display: none;
+}
+.techline-icon-muted {
+  color: #eeeeee;
+}
+.techline-icon-light {
+  color: #ffffff;
+}
+.techline-icon-dark {
+  color: #333333;
+}
+.techline-icon-border {
+  border: solid 1px #eeeeee;
+  padding: .2em .25em .15em;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.techline-icon-2x {
+  font-size: 2em;
+}
+.techline-icon-2x.techline-icon-border {
+  border-width: 2px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.techline-icon-3x {
+  font-size: 3em;
+}
+.techline-icon-3x.techline-icon-border {
+  border-width: 3px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.techline-icon-4x {
+  font-size: 4em;
+}
+.techline-icon-4x.techline-icon-border {
+  border-width: 4px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+.techline-icon-5x {
+  font-size: 5em;
+}
+.techline-icon-5x.techline-icon-border {
+  border-width: 5px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+}
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
+}
+[class^="techline-icon-"].pull-left,
+[class*=" techline-icon-"].pull-left {
+  margin-right: .3em;
+}
+[class^="techline-icon-"].pull-right,
+[class*=" techline-icon-"].pull-right {
+  margin-left: .3em;
+}
+ * -------------------------- */
+/* Bootstrap 2.0 sprites.less reset */
+[class^="techline-icon-"],
+[class*=" techline-icon-"] {
+  display: inline;
+  width: auto;
+  height: auto;
+  line-height: normal;
+  vertical-align: baseline;
+  background-image: none;
+  background-position: 0% 0%;
+  background-repeat: repeat;
+  margin-top: 0;
+}
+
+/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+   readers do not read off random characters that represent icons */
+.techline-icon-twitter:before {
+  content: "\f099";
+}
+.techline-icon-facebook:before {
+  content: "\f09a";
+}
+.techline-icon-pinterest:before {
+  content: "\f0d2";
+}
+.techline-icon-google-plus:before {
+  content: "\f0d5";
+}
+.techline-icon-envelope:before {
+  content: "\f0e0";
+}
+.techline-icon-linkedin:before {
+  content: "\f0e1";
+}
+.techline-icon-stumbleupon:before {
+  content:  "\f1a4";
+}
+/*-- tss FRONT STYLE --------------------
+------------------------------------------*/
+.clearfix{*zoom:1}
+.clearfix:after{clear:both}
+.clearfix:before,.clearfix:after{content:" ";display:table}
+.tss-techline-icons.large-format li a,
+.tss-techline-icons.large-format li a .text{-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;-ms-backface-visibility:hidden}
+.tss-techline-icons,.tss-techline-icons li,.tss-techline-icons li a{-moz-box-sizing:border-box;box-sizing:border-box}
+.tss-techline-icons{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;height:20px;margin:0;padding:0;margin-bottom: 30px; border-bottom: 1px solid #cccccc; margin-top: -15px}
+.tss-techline-icons li{float:left;height:100%;list-style:none;margin:0 !important;padding:0 2.5px}
+.tss-techline-icons li.email a{background-color:#FFFFFF;}
+.tss-techline-icons li.email a:hover{color: #bdc162;text-decoration: none !important;}
+.tss-techline-icons li.facebook a{background-color:#FFFFFF}
+.tss-techline-icons li.facebook a:hover{color: #bdc162;text-decoration: none !important;}
+.tss-techline-icons li.tumblr a{background-color:#FFFFFF}
+.tss-techline-icons li.tumblr a:hover{color: #bdc162;text-decoration: none !important;}
+.tss-techline-icons li.linkedin a{background-color:#FFFFFF}
+.tss-techline-icons li.linkedin a:hover{color: #bdc162;text-decoration: none !important;}
+.tss-techline-icons li.stumbleupon a{background-color:#FFFFFF}
+.tss-techline-icons li.stumbleupon a:hover{color: #bdc162;text-decoration: none !important;}
+.tss-techline-icons li.twitter a{background-color:#FFFFFF}
+.tss-techline-icons li.twitter a:hover{color: #bdc162;text-decoration: none !important;}
+.tss-techline-icons li.googleplus a{background-color:#FFFFFF}
+.tss-techline-icons li.googleplus a:hover{color: #bdc162;text-decoration: none !important;}
+.tss-techline-icons li.youtube a{background-color:#FFFFFF}
+.tss-techline-icons li.youtube a:hover{color: #bdc162;text-decoration: none !important;}
+.tss-techline-icons li.reddit a{background-color:#FFFFFF}
+.tss-techline-icons li.reddit a:hover{color: #bdc162;text-decoration: none !important;}
+.tss-techline-icons li.pinterest a{background-color:#FFFFFF}
+.tss-techline-icons li.pinterest a:hover{color: #bdc162;text-decoration: none !important;}
+.tss-techline-icons li.github a{background-color:#FFFFFF}
+.tss-techline-icons li.github a:hover{color: #bdc162;text-decoration: none !important;}
+.tss-techline-icons li a{ outline:none;line-height: 10px;background-color:#ccc;border-radius:2px;display:block;font-size:10px;font-weight:bold;height:100%;padding:6px 20px 11px 30px;position:relative;text-align:center;text-decoration:none;text-transform:uppercase;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;width:75%;-webkit-transition:background-color 0.2s ease-in-out;-moz-transition:background-color 0.2s ease-in-out;-o-transition:background-color 0.2s ease-in-out;transition:background-color 0.2s ease-in-out}
+.tss-techline-icons li a .techline-icon{bottom: 0; display: block; font-size: 15px; left:14px; height: 12px; margin: auto; position: absolute; top: 0;} 	 	
+.tss-techline-icons li a .text{}
+.tss-techline-icons li a:active{box-shadow:inset 1px 3px 15px 0 rgba(22,0,0,0.25)}
+.tss-techline-icons li.small a{padding:0}
+.tss-techline-icons li.small a .techline-icon{bottom: 0;display: block; height: 22px; left: auto; margin: auto; overflow: hidden; position: absolute; text-align: center; top: 0; width: 100%;} 	
+.tss-techline-icons li.small a .text{visibility:hidden}
+.tss-techline-icons.large-format{height:auto;width: 10px;}
+.tss-techline-icons.large-format li{height:auto}
+.tss-techline-icons.large-format li a{font-size:15px;font-size:1vw;padding:7% 0% 7% 12%;border-radius:0.2em}
+.tss-techline-icons.large-format li a .techline-icon{left:7%;padding-top:0;width:12%}
+.tss-techline-icons.large-format li a .techline-icon svg{height:100%;width:100%}
+.tss-techline-icons.large-format li a .text{font-size:15px;font-size:1vw}
+.tss-techline-icons.large-format li a:hover{font-size:10px;font-size:1vw;padding:7% 0% 7% 12%;border-radius:0.2em}
+.tss-techline-icons.small-format{padding-top:5px}
+.tss-techline-icons.small-format li{height:80%;padding:0 1.5px}
+.tss-techline-icons.small-format li a .techline-icon{height:100%;padding-top:0}
+.tss-techline-icons.tiny-format li a .techline-icon{color:inherit;}
+.tss-techline-icons.tiny-format{height:22px;position:relative}
+.tss-techline-icons.tiny-format li{padding-right:7px}
+.tss-techline-icons.tiny-format li a{background-color:transparent;padding:0;}
+.tss-techline-icons.tiny-format li a:hover,.tss-techline-icons.tiny-format li a:active{background-color:transparent}

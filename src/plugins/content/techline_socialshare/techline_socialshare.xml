@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" method="upgrade" type="plugin" group="content">
+	<name>Content-Techlineinfo Responsive Social Share</name>
+	<author>Sujith Kumar</author>
+	<creationDate>2015 January 18</creationDate>
+	<copyright>techlineinfo.com</copyright>
+	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<authorEmail>admin@techlineinfo.com</authorEmail>
+	<authorUrl>http://www.techlineinfo.com</authorUrl>
+	<version>1.0.0</version>
+	<description><![CDATA[ <div style="color:#FFFFFF; background:#056F79; border:1px solid #B0DFFF; padding:10px;margin:10px; border-radius: 4px;">
+		<div><a href="http://www.techlineinfo.com" target="_blank" style="color:#FFFFFF;"><h2>Techlineinfo Responsive Social Share</h2> </a><br />A Fully responsive Beautiful Responsive Social Share buttons for your website, which adjust automatically with any type of Containers and devices.</div>
+(Please post your comments, Feature Requests, bug reports here : <a href="http://www.techlineinfo.com/contact" target="_blank" style="color:#FFFFFF;">Click Here - Contact Us</a> )
+		</div> ]]>
+	</description>
+	<files>
+	<filename plugin="techline_socialshare">techline_socialshare.php</filename>
+	<filename>index.html</filename>
+       <filename>license.txt</filename>
+	<folder>language</folder>
+<folder>js</folder>
+ <folder>font</folder>
+	 <folder>css</folder>
+</files>
+	 <files folder="css">
+		<filename>styles.css</filename>
+		</files>
+<files folder="js">
+		<filename>techline.min.js</filename>
+			</files>
+<files folder="font">
+<filename>index.html</filename>
+<filename>FontAwesome.otf</filename>
+<filename>fontawesome-webfont.eot</filename>
+<filename>fontawesome-webfont.svg</filename>
+<filename>fontawesome-webfont.ttf</filename>
+<filename>fontawesome-webfont.woff</filename>		
+</files>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_content_techline_socialshare.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_content_techline_socialshare.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+		    <fieldset name="basic">
+<field name="max_width" type="text" default="600px" label="PLG_TECHLINEINFO_SOCIAL_SHARE_MAX_WIDTH" description="PLG_TECHLINEINFO_SOCIAL_SHARE_MAX_WIDTH_DESC" />
+<field name="show_front" type="radio" class="btn-group" default="1" label="PLG_TECHLINEINFO_SOCIAL_SHARE_SHOW_FRONT" description="PLG_TECHLINEINFO_SOCIAL_SHARE_SHOW_FRONT_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+<field name="position_featured" type="radio" class="btn-group" default="above" label="PLG_TECHLINEINFO_SOCIAL_SHARE_POSITION_FEATURED" description="PLG_TECHLINEINFO_SOCIAL_SHARE_POSITION_FEATURED_DESC">
+						<option value="above">PLG_TECHLINEINFO_SOCIAL_SHARE_ABOVE</option>
+						<option value="below">PLG_TECHLINEINFO_SOCIAL_SHARE_BELOW</option>
+					</field>
+					<field name="position" type="radio" class="btn-group" default="above" label="PLG_TECHLINEINFO_SOCIAL_SHARE_POSITION" description="PLG_TECHLINEINFO_SOCIAL_SHARE_POSITION_DESC">
+						<option value="above">PLG_TECHLINEINFO_SOCIAL_SHARE_ABOVE</option>
+						<option value="below">PLG_TECHLINEINFO_SOCIAL_SHARE_BELOW</option>
+<option value="both">PLG_TECHLINEINFO_SOCIAL_SHARE_BOTH</option>
+					</field>
+					
+					<field name="show" type="list" multiple="true" default="none" label="Exclude Views" description="Select where to exclude Ad Units, use CTRL for multiple select">
+						<option value="frontpage">Front Page</option>
+						<option value="featured">Featured</option>
+						<option value="category">Category</option>
+						<option value="categories">Categories</option>
+<option value="k2categories">K2Categories</option>
+						<option value="archive">Archive</option>	
+						<option value="search">Search</option>
+						<option value="other">Other than Com_Content</option>
+						<option value="none">None</option>
+					</field>				
+					<field name="exclude_cat" type="category" extension="com_content" multiple="true" size="10" default="" label="PLG_TECHLINEINFO_SOCIAL_SHARE_EXCLUDE_CATEGORIE" description="PLG_TECHLINEINFO_SOCIAL_SHARE_EXCLUDE_CATEGORIE_DESC" >
+					</field>
+					<field name="exclude_art" type="text" default="" label="PLG_TECHLINEINFO_SOCIAL_SHARE_EXCLUDE_ARTICLE_ID" description="PLG_TECHLINEINFO_SOCIAL_SHARE_EXCLUDE_ARTICLE_ID_DESC" />
+					<field name="email" type="radio" class="btn-group" default="1" label="PLG_TECHLINEINFO_SOCIAL_SHARE_FB_SHOW_BUTTON_EMAIL" description="PLG_TECHLINEINFO_SOCIAL_SHARE_FB_SHOW_BUTTON_EMAIL_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+								
+					<field name="facebook" type="radio" class="btn-group" default="1" label="PLG_TECHLINEINFO_SOCIAL_SHARE_FB_SHOW_BUTTON_LIKE" description="PLG_TECHLINEINFO_SOCIAL_SHARE_FB_SHOW_BUTTON_LIKE_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+																	
+												
+					<field name="twitter" type="radio" default="1" class="btn-group" label="PLG_TECHLINEINFO_SOCIAL_SHARE_TWT_SHOW_BUTTON_TWITTER" description="PLG_TECHLINEINFO_SOCIAL_SHARE_TWT_SHOW_BUTTON_TWITTER_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+<field name="stumbleupon" type="radio" default="1" class="btn-group" label="PLG_TECHLINEINFO_SOCIAL_SHARE_SHOW_BUTTON_STUMBLEUPON" description="PLG_TECHLINEINFO_SOCIAL__SHOW_BUTTON_STUMBLEUPON_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+								<field name="google" type="radio" default="1" class="btn-group" label="PLG_TECHLINEINFO_SOCIAL_SHARE_G1_SHOW_BUTTON_GOOGLE" description="PLG_TECHLINEINFO_SOCIAL_SHARE_G1_SHOW_BUTTON_GOOGLE_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+											
+						<field name="linkedin" type="radio" default="1" class="btn-group" label="PLG_TECHLINEINFO_SOCIAL_SHARE_LKN_SHOW_BUTTON_LINKEDIN" description="PLG_TECHLINEINFO_SOCIAL_SHARE_LKN_SHOW_BUTTON_LINKEDIN_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+						</field>
+					<field name="pinterest" type="radio" class="btn-group" default="1" label="PLG_TECHLINEINFO_SOCIAL_SHARE_SHOW_BUTTON_PINTEREST" description="PLG_TECHLINEINFO_SOCIAL_SHARE_SHOW_BUTTON_PINTEREST_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>					
+				<field name="enable_bitly" type="radio" default="0" class="btn-group" label="PLG_TECHLINEINFO_SOCIAL_SHARE_TWT_BITLY" description="PLG_TECHLINEINFO_SOCIAL_SHARE_TWT_BITLY_DESC">
+						<option value="0">JNO</option>						
+						<option value="1">JYES</option>
+					</field>
+<field name="bitly_username" type="text" default="your bitly username here" label="PLG_TECHLINEINFO_SOCIAL_SHARE_BITLY_USERNAME" description="PLG_TECHLINEINFO_SOCIAL_SHARE_BITLY_API_DESC" />
+<field name="bitly_api" type="text" default="your bitly api " label="PLG_TECHLINEINFO_SOCIAL_SHARE_BITLY_API" description="PLG_TECHLINEINFO_SOCIAL_SHARE_BITLY_API_DESC" />		
+			</fieldset>
+		</fields>
+	</config>
+<updateservers>
+<server type="extension" priority="1" name="Techlineinfo Responsive SOcial share update"><![CDATA[http://techlineinfo.com/plugins/updateplg.xml]]></server>
+	</updateservers>
+</extension>

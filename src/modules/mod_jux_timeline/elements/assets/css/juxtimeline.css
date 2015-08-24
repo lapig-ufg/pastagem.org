@@ -1,0 +1,15 @@
+/**
+ * @version		$Id$
+ * @author		JoomlaUX
+ * @package		Joomla.Site
+ *
+ * @copyright	Copyright (C) 2013 JoomlaUX. All rights reserved.
+ * @license		License GNU General Public License version 2 or later; see LICENSE.txt, see LICENSE.php
+ */
+.ntm-item{
+	cursor: move;
+	position: relative;
+}
+#juxtimeline_remove{
+	float: right;
+}

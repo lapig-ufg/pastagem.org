@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="module" version="3.0" client="site" method="upgrade">
+	<name>JUX Timeline</name>
+	<author>JoomlaUX</author>
+	<creationDate>December 2014</creationDate>
+	<copyright>Copyright (C) 2014 JoomlaUX. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>admin@joomlaux.com</authorEmail>
+	<authorUrl>www.joomlaux.com</authorUrl>
+	<version>1.0.1</version>
+	<description>
+		<![CDATA[
+                        <div class='js_desc'>
+			<h3 style="color: #008000;">JUX Timeline</h3>
+			<img alt='JUX Timeline' src='http://www.joomlaux.com/images/digitalstore/preview/jux-timeline.png' width='40%' style='margin-bottom:30px'/>
+                        <p style='text-align:justify;'>JUX Timeline is a joomla module which was built to help business, organizations showing their timeline of development and impress new customers. From the timeline, customers can easily have an overview about the company activities and evolution.
+				</p>
+			<p style='text-align:justify;'>
+                        <p style='clear:both'><span style='color: #ff6600;'><strong><strong>Most completed Timeline</strong></strong></p>
+				<ul class='list-style'>
+					<li>JUX Timeline will Display in vertical line</li>
+					<li>Help you can Detail information</li>
+					<li><strong>Mobile &amp; Tablets compatible!</strong></li>
+                                        <li>Backend fully control</li>
+					<li><span>Available for Joomla™ 3.x</span></li>
+					
+				</ul>
+				<p><strong><span style='color: #ff0000;'>Easy to use</span><br /></strong></p>
+				<ul class='list-style'>
+					<li>Works out of the box with most Joomla Templates</li>
+					<li><strong>No coding required!</strong></li>
+				</ul>
+				<p><span style='color: #008000;'><strong>Userful Links</strong></span></p>
+				<ul class='list-style'>
+					<li><a target='_blank' href='http://www.joomlaux.com/document/jux_timeline/'>Userguide</a></li>
+					<li><a target='_blank' href='http://joomlaux.com/forum'>Forums</a></li>
+					<li><a target='_blank' href='http://www.joomlaux.com/support/contact-us.html'>Submit Ticket</a></li>
+				</ul>
+				<p>Copyright 2013 - 2014 <a href='http://www.joomlaux.com/' title='Visit JoomlaUX.com'>JoomlaUX.com</a>.</p>
+			
+		
+		<style type='text/css'>
+			.js_desc{
+				text-align: left;
+			}
+			.js_desc h3{
+				margin: 20px 0px 10px 0px;
+			}
+			.js_desc img{
+				width:40%;
+				margin:5px 5px 5px 0px;
+			}
+			.js_desc p,.js_desc li{
+				list-style: none outside none;
+				padding: 5px 5px 5px 0px;
+			}
+
+			.js_desc ul.list-style li{
+				background:url(http://www.joomlaux.com/images/icons/tick.png) 0px 6px no-repeat;
+				padding-left:30px;
+				line-height:15px;
+			}
+		</style>
+			</div>
+		 ]]>
+	</description>
+	<files>
+		<filename module="mod_jux_timeline">mod_jux_timeline.php</filename>
+		<folder>tmpl</folder>
+		<folder>assets</folder>
+		<folder>elements</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_jux_timeline.xml</filename>
+		<folder>language</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB.mod_jux_timeline.ini</language>
+		<language tag="en-GB">language/en-GB.mod_jux_timeline.sys.ini</language>
+	</languages>
+	<updateservers>
+    <server type="extension" priority="1" name="JUX Timeline">http://www.joomlaux.com/updates/extensions/mod_jux_timeline_update.xml</server>
+    </updateservers>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/modules/mod_jux_timeline/elements">
+				 <field name="update_infor"
+                type="juxupdate"
+                class="alert alert-warning"
+                close="true"
+                download_url="http://www.joomlaux.com/download.html"
+                >
+                </field>
+                
+				<field
+					name="display"
+					type="list"
+					default="0"
+					label="MOD_JUX_TIMELINE_DISPLAY"
+					description="MOD_JUX_TIMELINE_DISPLAY_DESC">
+					<option value="">JUX_TIMELINE_DEFAULT</option>
+					<option
+						value="1">JUX_TIMELINE_EXPAND</option>
+					<option
+						value="2">JUX_TIMELINE_COLLAPSE</option>
+				</field>
+				<field
+                    name="timeline"
+                    type="juxtimeline"
+                    label="MOD_JUX_TIMELINE_ADD_LABEL"
+                    description="MOD_JUX_TIMELINE_ADD_DESC"
+                    filter="raw"
+                    />
+			</fieldset>
+			<fieldset
+				name="advanced">
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option
+						value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

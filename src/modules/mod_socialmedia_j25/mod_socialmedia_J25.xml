@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+	<name>WSD Social Media Widget</name>
+	<author>Worcester Joomla Development</author>
+	<creationDate>9th March 2015</creationDate>
+	<copyright>Copyright (C) 2015 Worcester Joomla Development</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@worcesterjoomladevelopment.co.uk</authorEmail>
+	<authorUrl>http://www.worcesterjoomladevelopment.co.uk</authorUrl>
+	<version>1.0</version>
+	<description>Thank you for installing the WSD Social Media Widget.<br /><br /> To display on your website, hide the title, place the module in any active position, Normally footer or Debug works great, on your website and it will automatically display on the side of your screen.<br /><br /> Please enter the URLs and enable the social websites you want to link to in the module manager section. </description> 
+	<files>
+		<folder>assets</folder>
+		<folder>assets/images</folder>
+		<folder>tmpl</folder>
+		<filename module="mod_socialmedia_J25">mod_socialmedia_J25.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_socialmedia_J25.xml</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				
+					<field
+					name="linkedin"
+					type="text"
+					default="https://uk.linkedin.com/company/joomla"
+					label="Linked In"
+					description="enter URL for your Linked In page here" />
+					
+					<field
+					name="linkedinoff"
+					type="radio"
+					default="on"
+					label="Turn Linkedin On/Off"
+					description="Enable/Disable">
+					<option value="on">On</option>
+					<option value="off">Off</option>
+					</field>
+					
+					<field
+					name="twitter"
+					type="text"
+					default="https://twitter.com/twitter"
+					label="Twitter"
+					description="enter URL for your twitter page here" />
+					
+					<field
+					name="twitteroff"
+					type="radio"
+					default="on"
+					label="Turn Twitter On/Off"
+					description="Enable/Disable">
+					<option value="on">On</option>
+					<option value="off">Off</option>
+					</field>
+					
+					<field
+					name="facebook"
+					type="text"
+					default="https://www.facebook.com/FacebookDevelopers"
+					label="Facebook"
+					description="enter URL for your facebook page here" />
+					
+					<field
+					name="facebookoff"
+					type="radio"
+					default="on"
+					label="Turn Facebook On/Off"
+					description="Enable/Disable">
+					<option value="on">On</option>
+					<option value="off">Off</option>
+					</field>
+					
+					<field
+					name="pinterest"
+					type="text"
+					default="http://www.pinterest.com/"
+					label="Pinterest"
+					description="enter URL for your pinterest page here" />
+					
+					<field
+					name="pinterestoff"
+					type="radio"
+					default="on"
+					label="Turn Pinterest On/Off"
+					description="Enable/Disable">
+					<option value="on">On</option>
+					<option value="off">Off</option>
+					</field>
+					
+					<field
+					name="google"
+					type="text"
+					default="https://plus.google.com/+google/posts"
+					label="Google+"
+					description="enter URL for your Google+ page here" />
+					
+					<field
+					name="googleoff"
+					type="radio"
+					default="on"
+					label="Turn Google On/Off"
+					description="Enable/Disable">
+					<option value="on">On</option>
+					<option value="off">Off</option>
+					</field>
+				
+			</fieldset>
+			<fieldset name="advanced">
+			
+			<field
+					name="leftorright"
+					type="radio"
+					default="right"
+					label="Display Left/Right"
+					description="Which side of the screen would you like the module to be displayed">
+					<option value="left">Left</option>
+					<option value="right">Right</option>
+					</field>
+			
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					default=""
+					label="Module Suffix"
+					description="Put your module suffix here" />
+				
+			</fieldset>
+		</fields>
+	</config>
+</extension>

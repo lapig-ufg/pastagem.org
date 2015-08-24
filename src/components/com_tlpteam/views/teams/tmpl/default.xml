@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_TLPTEAM_TITLE_LIST_VIEW_TEAMS" option="View">
+        <message>
+                        <![CDATA[COM_TLPTEAM_TITLE_LIST_VIEW_TEAMS_DESC]]>
+        </message>
+	</layout>
+</metadata>
